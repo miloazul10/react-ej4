@@ -33,7 +33,14 @@ Input:  feed -> [{username: "ajplusespanol", ...},{ username: "elonmusk", ... }]
 Output: [{username: "@ajplusespanol"}, {username: "@elonmusk"}]
 */
 
-const updateUsername = (feed) => {}
+const updateUsername = (feed) => {
+    const newArr = [];
+    feed.forEach(element => {
+        element["username"] = "@"+element["username"];
+        narr.push(element);
+        });
+    return newArr;
+}
 
 /*
 4. Crear una función para actualizar el no de interacciones de cada tweet 
