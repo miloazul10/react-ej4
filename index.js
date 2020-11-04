@@ -2,13 +2,16 @@
 //Nota: 
 //1. En cada una de las funciones deberás de usar el parametro feed para realizar las operaciones
 //2. A partir de la función no 3 se deberá de regresar como resultado el arreglo de tweets con todas sus propiedades y ////// valores actualizados acorde a las operaciones de cada uno
-const {feed} = require('./source');
+// const {feed} = require('./source');
 /*
 1. Obtener el numero total de Tweets
 Input: feed -> [{propiedades...}, {propiedades...}]
 Output: 2
 */
-const countTweets = (feed) => {};
+const countTweets = (feeds) => {
+    const totalTeewts = feeds.length;
+    return totalTeewts;
+};
 
 /*
 2. Obtener un arreglo con todos los perfiles de usuarios que están en el arreglo de tweets
@@ -16,7 +19,13 @@ Input: feed -> [{profile: "AJ + Español"},{ profile: "Elon Musk" }]
 Output: ["AJ + Español", "Elon Musk"]
 */
 
-const getProfiles = (feed) => {}
+const getProfiles = (feed) => {
+    let arrayProfile = [];
+    feeds.forEach(feed => {
+        arrayProfile.push(feed.getProfile)        
+    });
+    return arrayProfile;
+}
 
 /*
 3. Crear una función para obtener el arreglo de tweets con todas sus propiedades pero se tendrá que agregar un '@' al inicio del valor para la propiedad username
