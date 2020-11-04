@@ -199,7 +199,7 @@ const getTweetsLessOrEqualsThan = (feed, noComments) => {
     interaction -> "likes",
     quantity -> 85000
 
-    Output ============
+    Output =============
     [
         { 
             interaction: {
